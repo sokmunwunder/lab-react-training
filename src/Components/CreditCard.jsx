@@ -17,6 +17,9 @@ const CreditCard = (props) => {
   //const twoDigitMonth = [expirationMonth.toString()].unshift(Number('0'));
   // expirationMonth <= 9 ? expirationMonth.toString().unshift('0') : '';
 
+  const hiddenNumber = '•••• •••• ••••' + ' ' + number.toString().slice(12);
+  console.log(hiddenNumber);
+
   return (
     <div
       className="creditCard"
@@ -25,20 +28,34 @@ const CreditCard = (props) => {
       <div className="creditCardDisplay">
         {' '}
         <div>
-          <h2>{type}</h2>
+          <h2>
+            {type === 'Visa' ? (
+              <img className="image" src="./img/visa.png" alt="Visa Image" />
+            ) : (
+              <img
+                className="image"
+                src="./img/master-card.svg"
+                alt="MasterCard Image"
+              />
+            )}
+          </h2>
         </div>
         <div>
-          <h2>{number}</h2>
-        </div>
-        <div>
-          <h4>
+          {/* <div className="creditcardnumber"> */}
+          <h2>{hiddenNumber}</h2>
+          {/* <h2>{number.toString().slice(12)}</h2> */}
+          {/* </div>
+        <div> */}
+          <h4 className="expirationBank">
             Expires {expirationMonth <= 9 ? twoDigitMonth : expirationMonth}/
             {expirationYear.toString().slice(2)}
           </h4>
-          <h4>{bank}</h4>
-        </div>
-        <div>
+          <h4 className="expirationBank">{bank}</h4>
+          {/* </div>
+        <div> */}
           <h4>{owner}</h4>
+          {/* </div>
+      </div> */}
         </div>
       </div>
     </div>

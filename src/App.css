@@ -78,6 +78,10 @@
   width: 500px;
   height: 250px;
   border-radius: 5%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: flex-start;
 }
 
 /* .creditCardDisplay {
@@ -85,3 +89,24 @@
   flex-direction: row;
   justify-content: space-around;
 } */
+
+/* .creditcardnumber {
+  display: flex;
+
+  flex-direction: row;
+  justify-content: space-around;
+}*/
+
+.expirationBank  {
+  display: flex;
+
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.image {
+  width: 40px;
+  display: flex;
+  /* flex-direction: row;
+  justify-content: flex-end; */
+}

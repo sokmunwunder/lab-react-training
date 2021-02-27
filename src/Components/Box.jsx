@@ -17,6 +17,8 @@ const BoxColor = (props) => {
     width: '70%',
     marginLeft: 50,
     border: '1px solid rgb(0,0,0)',
+    marginTop: 20,
+    marginBottom: 20,
   };
 
   return (
