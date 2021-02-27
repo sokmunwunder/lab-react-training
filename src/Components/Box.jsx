@@ -14,6 +14,9 @@ const BoxColor = (props) => {
     backgroundColor: `rgb(${r}, ${g}, ${b})`,
     padding: 20,
     color: textColor,
+    width: '70%',
+    marginLeft: 50,
+    border: '1px solid rgb(0,0,0)',
   };
 
   return (

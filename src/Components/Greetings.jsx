@@ -4,7 +4,7 @@ const Greetings = (props) => {
   const { lang, children } = props;
 
   return (
-    <div>
+    <div className="greetings">
       <h3> {lang.children}</h3>
       {children}
     </div>

@@ -36,3 +36,52 @@
     transform: rotate(360deg);
   }
 }
+
+.idcard {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  border: 1px solid black;
+  margin-bottom: 10px;
+  text-align: left;
+  font-size: 0.65em;
+  margin-left: 20px;
+}
+
+.idcarddetails {
+  margin-left: 10px;
+}
+
+/* .idcarddetails,
+.idcardimages {
+  border: 1px solid black;
+} */
+
+.greetings {
+  border: 2px solid black;
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 15px;
+}
+
+.random {
+  border: 2px solid black;
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 15px;
+}
+
+.creditCard {
+  border: 1px solid black;
+  width: 500px;
+  height: 250px;
+  border-radius: 5%;
+}
+
+/* .creditCardDisplay {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+} */

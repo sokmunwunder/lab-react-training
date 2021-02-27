@@ -10,7 +10,7 @@ const Random = (props) => {
   console.log(randomBetween(1, 100));
 
   return (
-    <div>
+    <div className="random">
       <span>
         Random value between {min} and {max} => {`${randomBetween(min, max)}`}.
       </span>
