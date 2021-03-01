@@ -6,6 +6,8 @@ import Random from './Components/Random';
 import BoxColor from './Components/Box';
 import CreditCard from './Components/CreditCard';
 import Rating from './Components/Rating';
+import DriverCard from './Components/DriverCard';
+// import CarInfo from './Components/DriverCard';
 
 function App() {
   return (
@@ -18,7 +20,6 @@ function App() {
         birth={new Date('1992, 7, 14')}
         picture={'https://randomuser.me/api/portraits/women/44.jpg'}
       />
-
       <IdCard
         lastName="Delores"
         firstName="Obrien"
@@ -27,16 +28,12 @@ function App() {
         birth={new Date('1988-05-11')}
         picture={'https://randomuser.me/api/portraits/men/44.jpg'}
       />
-
       <Greetings lang="de">Hallo Ludwig</Greetings>
-
       <Greetings lang="fr">Bonjour Francois</Greetings>
-
       <Random min={1} max={6} />
       <Random min={1} max={100} />
       <BoxColor r={255} g={0} b={0} />
       <BoxColor r={128} g={255} b={0} />
-
       <CreditCard
         type="Visa"
         number="0123456789018845"
@@ -47,7 +44,6 @@ function App() {
         bgColor="#11aa99"
         color="white"
       />
-
       <CreditCard
         type="Master Card"
         number="0123456789010995"
@@ -58,7 +54,6 @@ function App() {
         bgColor="#eeeeee"
         color="#222222"
       />
-
       <CreditCard
         type="Visa"
         number="0123456789016984"
@@ -69,13 +64,23 @@ function App() {
         bgColor="#ddbb55"
         color="white"
       />
-
       <Rating>0</Rating>
       <Rating>1.49</Rating>
       <Rating>1.5</Rating>
       <Rating>3</Rating>
       <Rating>4</Rating>
       <Rating>5</Rating>
+      <DriverCard
+        img="https://si.wsj.net/public/resources/images/BN-TY647_37gql_OR_20170621052140.jpg?width=620&height=428"
+        name="Traveis Kalanick"
+        rating={4.9}
+        car={{ model: 'Toyota Corolla Altis', licensePlate: 'CO42DE' }}
+      />
+      {/* <CarInfo
+        car={{
+          model: 'Toyota Corolla Altis'
+        }} */}
+      />
     </div>
   );
 }
