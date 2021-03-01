@@ -7,7 +7,7 @@ import BoxColor from './Components/Box';
 import CreditCard from './Components/CreditCard';
 import Rating from './Components/Rating';
 import DriverCard from './Components/DriverCard';
-// import CarInfo from './Components/DriverCard';
+import LikeButton from './Components/LikeButton';
 
 function App() {
   return (
@@ -83,6 +83,8 @@ function App() {
         rating={4.9}
         car={{ model: 'Audi A3', licensePlate: 'BE33ER' }}
       />
+
+      <LikeButton>Likes</LikeButton>
     </div>
   );
 }

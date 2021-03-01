@@ -16,7 +16,7 @@ const DriverCard = (props) => {
   return (
     <div>
       <div className="drivercarddetails">
-        <div>
+        <div className="cardimgname">
           <img className="drivercardimage" src={img} alt="Driver Image" />
           <h3>{name}</h3>
         </div>
