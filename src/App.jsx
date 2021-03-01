@@ -73,13 +73,15 @@ function App() {
       <DriverCard
         img="https://si.wsj.net/public/resources/images/BN-TY647_37gql_OR_20170621052140.jpg?width=620&height=428"
         name="Traveis Kalanick"
-        rating={4.9}
+        rating={4.2}
         car={{ model: 'Toyota Corolla Altis', licensePlate: 'CO42DE' }}
       />
-      {/* <CarInfo
-        car={{
-          model: 'Toyota Corolla Altis'
-        }} */}
+
+      <DriverCard
+        img="https://ubernewsroomapi.10upcdn.com/wp-content/uploads/2017/09/Dara_ELT_Newsroom_1000px.jpg"
+        name="Dara Khosrowshahi"
+        rating={4.9}
+        car={{ model: 'Audi A3', licensePlate: 'BE33ER' }}
       />
     </div>
   );

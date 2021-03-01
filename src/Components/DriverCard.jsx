@@ -1,5 +1,5 @@
 import React from 'react';
-import Rating from './Components/Rating';
+import Rating from './Rating';
 
 const DriverCard = (props) => {
   //   const { name, rating, img, car: model, car: licensePlate } = props;
@@ -18,14 +18,12 @@ const DriverCard = (props) => {
       <div className="drivercarddetails">
         <div>
           <img className="drivercardimage" src={img} alt="Driver Image" />
-        </div>
-        <div>
-          {' '}
           <h3>{name}</h3>
         </div>
+
         <Rating>{rating}</Rating>
 
-        <div className="cardetails">
+        <div className="carddetails">
           {/* <h3>{rating}</h3> */}
 
           <h3>{car.model}</h3>
