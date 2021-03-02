@@ -88,8 +88,8 @@ function App() {
       <LikeButton>Likes</LikeButton>
 
       <ClickablePicture
-        img="/img/persons/maxence.png"
-        imgClicked="/img/persons/maxence-glasses.png"
+        img="./img/persons/maxence.png"
+        imgClicked="./img/persons/maxence-glasses.png"
       />
     </div>
   );
