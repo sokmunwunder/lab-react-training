@@ -38,7 +38,7 @@ class LikeButton extends React.Component {
           className="Like"
           onClick={this.incrementCount}
           //   style={{ backgroundcolor: this.paintColor }}
-          style={{ backgroundcolor: this.paintColor }}
+          //style={{ backgroundcolor: this.paintColor }}
           //LikeButton
         >
           <span>{this.state.count}</span> {this.text}
