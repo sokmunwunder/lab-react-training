@@ -7,14 +7,8 @@ class LikeButton extends React.Component {
       count: 0,
     };
     this.text = 'Likes';
-    // this.backgroundcolor = [
-    //   'purple',
-    //   'blue',
-    //   'green',
-    //   'yellow',
-    //   'orange',
-    //   'red',
-    // ];
+
+    this.textOneLike = 'Like';
   }
 
   incrementCount = () => {
@@ -32,16 +26,16 @@ class LikeButton extends React.Component {
   //   };
 
   render() {
+    const color = ['purple', 'blue', 'green', 'yellow', 'orange', 'red'];
     return (
       <div>
         <button
           className="Like"
           onClick={this.incrementCount}
-          //   style={{ backgroundcolor: this.paintColor }}
-          //style={{ backgroundcolor: this.paintColor }}
-          //LikeButton
+          style={{ backgroundColor: color[this.state.count % color.length] }}
         >
-          <span>{this.state.count}</span> {this.text}
+          <span>{this.state.count}</span>{' '}
+          {this.state.count === 1 ? this.textOneLike : this.text}
         </button>
       </div>
     );

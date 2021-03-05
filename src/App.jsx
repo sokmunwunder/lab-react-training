@@ -9,6 +9,9 @@ import Rating from './Components/Rating';
 import DriverCard from './Components/DriverCard';
 import LikeButton from './Components/LikeButton';
 import ClickablePicture from './Components/ClickablePicture';
+import Facebook from './Components/Facebook';
+import Dice from './Components/Dice';
+import SignupPage from './Components/SignupPage';
 
 function App() {
   return (
@@ -84,13 +87,19 @@ function App() {
         rating={4.9}
         car={{ model: 'Audi A3', licensePlate: 'BE33ER' }}
       />
-
-      <LikeButton>Likes</LikeButton>
+      <LikeButton />
+      <LikeButton />
+      {/* <LikeButton>Likes</LikeButton>
+      <LikeButton>Likes</LikeButton> */}
 
       <ClickablePicture
         img="./img/persons/maxence.png"
         imgClicked="./img/persons/maxence-glasses.png"
       />
+
+      <Dice />
+      <Facebook />
+      <SignupPage />
     </div>
   );
 }
