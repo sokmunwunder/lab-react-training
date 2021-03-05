@@ -7,18 +7,26 @@ class SignupPage extends React.Component {
     nationality: ['British', 'French', 'German'],
   };
 
-  handleChange = (event) => {
-    const value = event.target.value;
-    this.setState({
-      email: value,
-    });
-  };
+  //   handleChange = (event) => {
+  //     const value = event.target.value;
+  //     this.setState({
+  //       email: value,
+  //     });
+  //   };
 
   handleGenericChange = (event) => {
     const name = event.target.name;
     const value = event.target.value;
+
     this.setState({
       [name]: value,
+    });
+  };
+
+  handleSelectChange = (event) => {
+    const value = event.target.value;
+    this.setState({
+      nationality: value,
     });
   };
 
@@ -27,9 +35,12 @@ class SignupPage extends React.Component {
     const { email, password, nationality } = this.state;
     alert(
       `The form was submitted with ${email}, ${password}, ${
-        (this.state.nationality[0] && 'British') ||
-        (this.state.nationality[1] && 'French') ||
-        (this.state.nationality[2] && 'German')
+        // (this.state.nationality.includes('French') && 'French') ||
+        // (this.state.nationality.includes('German') && 'German')
+        (nationality === 'British' && 'British') ||
+        (nationality === 'French' && 'French') ||
+        (nationality === 'German' && 'German')
+        // (nationality[2] && 'German')
       } `
     );
   };
@@ -58,20 +69,44 @@ class SignupPage extends React.Component {
             value={this.state.password}
           />
           <label htmlFor="nationality">Nationality</label>
-          <select name="nationality" id="nationality">
-            <option value="">Please choose</option>
-            <option value="this.state.nationality[0]">British</option>
-            <option value="this.state.nationality[1]">French</option>
-            <option value="this.state.nationality[2]">German</option>
+          <select
+            name="nationality"
+            id="nationality"
+            onChange={this.handleSelectChange}
+            // value={this.state.nationality}
+          >
+            <option value={''}>Choose</option>
+            <option
+              value={this.state.nationality[0]}
+              //onChange={this.handleSelectChange}
+            >
+              British
+            </option>
+            <option
+              value={this.state.nationality[1]}
+              //onChange={this.handleSelectChange}
+            >
+              French
+            </option>
+            <option
+              value={this.state.nationality[2]}
+              //onChange={this.handleSelectChange}
+            >
+              German
+            </option>
           </select>
 
-          <button>Submit</button>
+          <button>Sign Up</button>
         </form>
         <p>
-          {(this.state.nationality[0] && 'Hello') ||
-            (this.state.nationality[1] && 'Bonjour') ||
-            (this.state.nationality[2] && 'Guten Tag')}
-          ,your email is{' '}
+          {
+            //   (this.state.nationality[0] && 'Hello') ||
+            // (this.state.nationality.includes('French') && 'Bonjour') ||
+            (this.state.nationality === 'British' && 'Hello !') ||
+              (this.state.nationality === 'French' && 'Bonjour !') ||
+              (this.state.nationality === 'German' && 'Guten Tag !')
+          }
+          Your email is{' '}
           {!this.state.email ? 'to be filled in.' : this.state.email}
         </p>
       </div>
